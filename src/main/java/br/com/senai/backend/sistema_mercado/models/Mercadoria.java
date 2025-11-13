@@ -15,4 +15,62 @@ public class Mercadoria {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
     private Integer mercadId;
+    @Column(name="preco")
+    private double preco;
+    @Column(name="quantidade")
+    private int quantidade;
+    @Column(name="nome")
+    private String nome;
+    @Column(name="categoria")
+    private String categoria;
+
+    public Mercadoria(Integer mercadId, double preco, int quantidade, String nome, String categoria) {
+        this.mercadId = mercadId;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        this.nome = nome;
+        this.categoria = categoria;
+    }
+
+    public Integer getMercadId() {
+        return mercadId;
+    }
+
+    public void setMercadId(Integer mercadId) {
+        this.mercadId = mercadId;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+    
+    
 }
